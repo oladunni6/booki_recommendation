@@ -3,6 +3,10 @@
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -14,15 +18,20 @@
   color: var(--main-color);
 }
 
+ 
+
 .nav-buttons {
   border: None;
   background-color: transparent;
   font-size: 16px;
+  height: 45px;
+  margin: 3px;
 }
 
 .nav-buttons:hover {
   color: var(--main-color);
-  border-top: 2px solid var(--main-color);
+  border-top: 3px solid var(--main-color);
+  outline-offset: 0;
 }
 
 .body {
@@ -38,10 +47,17 @@
 .booki-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+  height: 40px;
 }
 
 .Booki-logo {
   height: 19px;
+}
+
+.booki-subtext h2 {
+  margin-bottom: 0;
 }
 
 .section-title {
@@ -88,16 +104,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   width: 15%;
   border-radius: 10px 0 0 10px;
+  background-color: #d3d3d3c5;
+}
+
+.icon-wrapper i {
+  color: black;
+}
+
+
+main {
+  border: 1px solid green;
 }
 
 .search-form {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 45%;
+  height: 40px;
 }
+
 
 .search-input {
   width: 55%;
