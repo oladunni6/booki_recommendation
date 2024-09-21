@@ -39,8 +39,10 @@ body {
 
 .main-container {
   width: 100%;
+  max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
+  margin: auto;
 }
 .booki-header {
   display: flex;
@@ -77,11 +79,17 @@ body {
 
 .card-title {
   font-size: 16px;
+  margin: 0;
+}
+
+.card-subtitle {
+    margin: 5px 0;
 }
 
 .accommodation-card {
-  width: 250px;
-  height: 124px;
+  min-width: 30%;
+  max-width: 30%;
+  height: 207px;
 }
 
 .accommodation-card img {
@@ -162,9 +170,16 @@ main {
 }
 */
 
+.card-image {
+    height: 50%;
+    border: 1px solid red;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
 .card-content {
   display: flex;
-  width: 30%;
+  flex-direction: column;
   height: 100px;
   column-gap: 20px;
 }
@@ -174,11 +189,15 @@ main {
   width: 65%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /****** Popular ***********/
 .popular {
-  width: 32%;
+    display: flex;
+    width: 32%;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .popular-title {
@@ -219,4 +238,14 @@ main {
 
 .popular-cards .card-rating {
   margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .accommodation-and-popular {
+    flex-direction: column;
+  }
+
+  .accommodation, .popular {
+    width: 100%;
+  }
 }
