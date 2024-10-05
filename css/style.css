@@ -94,8 +94,7 @@ body {
 
 .accommodation-card img {
   width: 100%;
-  border-radius: 20px 20px 20px 0;
-  object-position: 0px -40px;
+  height: 100%;
 }
 
 .dollars {
@@ -156,6 +155,12 @@ main {
   justify-content: space-between;
 }
 
+.filter-buttons {
+    border-radius: 50px;
+}
+
+
+
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
   display: flex;
@@ -172,7 +177,6 @@ main {
 
 .card-image {
     height: 50%;
-    border: 1px solid red;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
 }
@@ -182,14 +186,27 @@ main {
   flex-direction: column;
   height: 100px;
   column-gap: 20px;
+  padding: 5px;
 }
 
 /****** Accommodation ***********/
 .accommodation {
   width: 65%;
-  display: flex;
-  flex-direction: row;
+  height: 614px;
   flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+.accommodation h2 {
+    width: 100%;
+}
+
+.accommodation-card-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 /****** Popular ***********/
@@ -245,7 +262,16 @@ main {
     flex-direction: column;
   }
 
+  /*
   .accommodation, .popular {
     width: 100%;
   }
+    */
+}
+
+@media screen and (min-width: 1024px) {
+    /* iPad Pro */
+    .filters-header, .filters {
+        display: inline-block;
+    }
 }
