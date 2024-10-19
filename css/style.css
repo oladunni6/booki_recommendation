@@ -157,6 +157,8 @@ main {
 
 .filter-buttons {
   border-radius: 50px;
+  background-color:transparent;
+  border: 1px solid black;
 }
 
 /****** Accommodation And Popular ***********/
@@ -208,10 +210,11 @@ main {
 }
 
 /****** Popular ***********/
+
 .popular {
   display: flex;
   width: 32%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
@@ -253,6 +256,30 @@ main {
 
 .popular-cards .card-rating {
   margin-bottom: 5px;
+}
+
+/* Things To Do */
+.things-todo-title {
+    padding-left: 1%;
+}
+.todo-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.todo-card {
+    width: 23%;
+    border-radius: 20px;
+    height: 275px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.todo-img-wrapper {
+    height: 70%;
+    overflow: hidden;
+}
+.todo-img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -298,8 +325,15 @@ main {
   }
 
   .accommodation-card {
-    width: 100%;
     min-width: unset;
     max-width: unset;
+  }
+
+  .filter-buttons {
+    width: 200px;
+  }
+
+  .main-container {
+    padding: 0 10px;
   }
 }
