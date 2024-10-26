@@ -157,7 +157,7 @@ main {
 
 .filter-buttons {
   border-radius: 50px;
-  background-color:transparent;
+  background-color: transparent;
   border: 1px solid black;
 }
 
@@ -260,26 +260,31 @@ main {
 
 /* Things To Do */
 .things-todo-title {
-    padding-left: 1%;
+  padding-left: 1%;
 }
 .todo-container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .todo-card {
-    width: 23%;
-    border-radius: 20px;
-    height: 275px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  width: 23%;
+  border-radius: 20px;
+  height: 275px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .todo-img-wrapper {
-    height: 70%;
-    overflow: hidden;
+  height: 70%;
+  overflow: hidden;
 }
 .todo-img {
-    width: 100%;
-    border-radius: 20px 20px 0 0;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.footer {
+  display: flex;
+  border: 1px solid red;
 }
 
 @media only screen and (max-width: 1024px) {
