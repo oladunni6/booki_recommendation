@@ -16,6 +16,7 @@ body {
 .fa-solid,
 .fa-regular {
   color: var(--main-color);
+  font-size: 22px;
 }
 
 .nav-buttons {
@@ -152,13 +153,24 @@ main {
 
 .filters {
   display: flex;
-  justify-content: space-between;
+  column-gap: 20px;
 }
 
 .filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
   background-color: transparent;
-  border: 1px solid black;
+  border: 2px solid #d3d3d3;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  column-gap: 10px;
+}
+
+.filter-buttons:hover {
+    background-color: #DEEBFF;
 }
 
 /****** Accommodation And Popular ***********/
@@ -262,6 +274,7 @@ main {
 .things-todo-title {
   padding-left: 1%;
 }
+
 .todo-container {
   display: flex;
   justify-content: space-evenly;
@@ -284,19 +297,22 @@ main {
 
 .footer {
   display: flex;
+  width: 100%;
+  justify-content: space-around;
   border: 1px solid red;
+  background-color:#F2F2F2;
+}
+
+.list1, .list2, .list3 {
+    list-style: none;
 }
 
 @media only screen and (max-width: 1024px) {
   .accommodation-and-popular {
-    flex-direction: column;
+    flex-direction: row;
+
   }
 
-  /*
-  .accommodation, .popular {
-    width: 100%;
-  }
-    */
 }
 
 @media screen and (min-width: 1024px) {
@@ -304,6 +320,7 @@ main {
   .filters-header,
   .filters {
     display: inline-block;
+    width: fit-content;
   }
 }
 
@@ -340,5 +357,17 @@ main {
 
   .main-container {
     padding: 0 10px;
+  }
+
+  .todo-container {
+    flex-direction: column;
+  }
+
+  .todo-card {
+    width: 100%;
+}
+
+  .footer {
+    flex-direction: column;
   }
 }
