@@ -119,10 +119,6 @@ body {
   color: black;
 }
 
-main {
-  border: 1px solid green;
-}
-
 .search-form {
   display: flex;
   width: 45%;
@@ -170,7 +166,7 @@ main {
 }
 
 .filter-buttons:hover {
-    background-color: #DEEBFF;
+  background-color: #deebff;
 }
 
 /****** Accommodation And Popular ***********/
@@ -206,7 +202,6 @@ main {
   width: 65%;
   height: 614px;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 
 .accommodation h2 {
@@ -214,7 +209,6 @@ main {
 }
 
 .accommodation-card-container {
-  border: 1px solid blue;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -299,20 +293,19 @@ main {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  border: 1px solid red;
-  background-color:#F2F2F2;
+  background-color: #f2f2f2;
 }
 
-.list1, .list2, .list3 {
-    list-style: none;
+.list1,
+.list2,
+.list3 {
+  list-style: none;
 }
 
 @media only screen and (max-width: 1024px) {
   .accommodation-and-popular {
     flex-direction: row;
-
   }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -321,6 +314,7 @@ main {
   .filters {
     display: inline-block;
     width: fit-content;
+    display: flex;
   }
 }
 
@@ -365,7 +359,7 @@ main {
 
   .todo-card {
     width: 100%;
-}
+  }
 
   .footer {
     flex-direction: column;
