@@ -3,6 +3,10 @@
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -12,17 +16,21 @@
 .fa-solid,
 .fa-regular {
   color: var(--main-color);
+  font-size: 22px;
 }
 
 .nav-buttons {
   border: None;
   background-color: transparent;
   font-size: 16px;
+  height: 45px;
+  margin: 3px;
 }
 
 .nav-buttons:hover {
   color: var(--main-color);
-  border-top: 2px solid var(--main-color);
+  border-top: 3px solid var(--main-color);
+  outline-offset: 0;
 }
 
 .body {
@@ -32,16 +40,25 @@
 
 .main-container {
   width: 100%;
+  max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
+  margin: auto;
 }
 .booki-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+  height: 40px;
 }
 
 .Booki-logo {
   height: 19px;
+}
+
+.booki-subtext h2 {
+  margin-bottom: 0;
 }
 
 .section-title {
@@ -63,17 +80,22 @@
 
 .card-title {
   font-size: 16px;
+  margin: 0;
+}
+
+.card-subtitle {
+  margin: 5px 0;
 }
 
 .accommodation-card {
-  width: 250px;
-  height: 124px;
+  min-width: 30%;
+  max-width: 30%;
+  height: 207px;
 }
 
 .accommodation-card img {
   width: 100%;
-  border-radius: 20px 20px 20px 0;
-  object-position: 0px -40px;
+  height: 100%;
 }
 
 .dollars {
@@ -88,15 +110,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   width: 15%;
   border-radius: 10px 0 0 10px;
+  background-color: #d3d3d3c5;
+}
+
+.icon-wrapper i {
+  color: black;
 }
 
 .search-form {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 45%;
+  height: 40px;
 }
 
 .search-input {
@@ -123,7 +149,24 @@
 
 .filters {
   display: flex;
-  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid #d3d3d3;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  column-gap: 10px;
+}
+
+.filter-buttons:hover {
+  background-color: #deebff;
 }
 
 /****** Accommodation And Popular ***********/
@@ -140,16 +183,45 @@
 }
 */
 
+.card-image {
+  height: 50%;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  column-gap: 20px;
+  padding: 5px;
+}
+
 /****** Accommodation ***********/
 .accommodation {
   width: 65%;
+  height: 614px;
+  flex-wrap: wrap;
+}
+
+.accommodation h2 {
+  width: 100%;
+}
+
+.accommodation-card-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 /****** Popular ***********/
+
 .popular {
+  display: flex;
   width: 32%;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .popular-title {
@@ -190,4 +262,106 @@
 
 .popular-cards .card-rating {
   margin-bottom: 5px;
+}
+
+/* Things To Do */
+.things-todo-title {
+  padding-left: 1%;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.todo-card {
+  width: 23%;
+  border-radius: 20px;
+  height: 275px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.todo-img-wrapper {
+  height: 70%;
+  overflow: hidden;
+}
+.todo-img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.list1,
+.list2,
+.list3 {
+  list-style: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .accommodation-and-popular {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* iPad Pro */
+  .filters-header,
+  .filters {
+    display: inline-block;
+    width: fit-content;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    width: unset;
+  }
+
+  .accommodation-and-popular {
+    flex-direction: column-reverse;
+  }
+
+  .accommodation,
+  .popular {
+    width: 100%;
+    height: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .accommodation-card-container {
+    flex-direction: column;
+  }
+
+  .accommodation-card {
+    min-width: unset;
+    max-width: unset;
+  }
+
+  .filter-buttons {
+    width: 200px;
+  }
+
+  .main-container {
+    padding: 0 10px;
+  }
+
+  .todo-container {
+    flex-direction: column;
+  }
+
+  .todo-card {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
 }
