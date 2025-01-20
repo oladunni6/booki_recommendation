@@ -79,6 +79,7 @@ body {
 }
 
 .card-title {
+  display: flex;
   font-size: 16px;
   margin: 0;
 }
@@ -285,8 +286,10 @@ body {
   overflow: hidden;
 }
 .todo-img {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
 
 .footer {
@@ -322,6 +325,7 @@ body {
   .search-form {
     width: unset;
   }
+
 
   .accommodation-and-popular {
     flex-direction: column-reverse;
@@ -364,4 +368,11 @@ body {
   .footer {
     flex-direction: column;
   }
+}
+
+@media screen and (max-width: 768px) {
+    .card-txt {
+      display: flex;
+      justify-content: space-around;
+    }
 }
