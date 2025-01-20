@@ -150,7 +150,8 @@ body {
 
 .filters {
   display: flex;
-  column-gap: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .filter-buttons {
@@ -347,10 +348,6 @@ body {
   .accommodation-card {
     min-width: unset;
     max-width: unset;
-  }
-
-  .filter-buttons {
-    width: 200px;
   }
 
   .main-container {
